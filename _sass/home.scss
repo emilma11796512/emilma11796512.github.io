@@ -1,0 +1,65 @@
+// Styles for the home/main page
+
+.post-list__header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.post-list__heading {
+  @include relative-font-size(1.75);
+}
+
+.post-list {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-left: 0;
+  list-style: none;
+
+  &:hover h3 {
+    text-decoration: underline;
+  }
+
+  p {
+    padding-bottom: 30px;
+    color: rgb(17, 17, 17);
+  }
+}
+
+.post-list__item {
+  box-shadow: 8px 14px 38px rgba(39, 44, 49, .06), 1px 3px 8px rgba(39, 44, 49, .03);
+  border-radius: 5px;
+  overflow: hidden;
+  background: #fff;
+  transition: box-shadow, transform .5s ease;
+  width: 357px;
+  margin-bottom: $spacing-unit;
+
+  &:hover {
+    box-shadow: 8px 28px 50px rgba(39, 44, 49, .07), 1px 6px 12px rgba(39, 44, 49, .04);
+    transform: translate3D(0, -1px, 0) scale(1.02);
+  }
+
+  a {
+    text-decoration: none;
+  }
+}
+
+.post-list__item__content {
+  padding-left: 40px;
+  padding-right: 40px;
+}
+
+.post-list__link {
+  display: block;
+  @include relative-font-size(1.5);
+}
+
+.post__meta {
+  display: inline-block;
+  padding-top: 30px;
+  font-size: $small-font-size;
+  color: $grey-color;
+}

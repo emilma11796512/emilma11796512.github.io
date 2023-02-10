@@ -1,0 +1,13 @@
+{% if include.name %}
+  {% assign name = include.name %}
+{% else %}
+  {% assign name = include.repo %}
+{% endif %}
+
+{% if include.user %}
+  {% assign user = include.user %}
+{% else %}
+  {% assign user = site.github_username %}
+{% endif %}
+
+<a href="https://github.com/{{ user | cgi_escape | escape }}/{{ include.repo }}" rel="noopener noreferrer"><svg class="svg-icon"><use xlink:href="{{ '/assets/minima-social-icons.svg#github' | relative_url }}"></use></svg> <span>{{ name }} GitHub repository</span>
